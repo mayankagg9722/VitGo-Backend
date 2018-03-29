@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>VITMantra Chapter Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style2.css">
+    <link href="/stylesheets/jQueryUI.css" rel = "stylesheet">
+    <link href="/stylesheets/wickedpicker.css" rel = "stylesheet">
+    <script src = "/javascripts/jQuery.js"></script>
+    <script src = "/javascripts/jQueryUI.js"></script>
+    <script src = "/javascripts/wickedPicker.js"></script>
+    <script type="text/javascript" src="/javascripts/script.js"></script>
+</head>
+<body>
+
+    <header>
+        VITMantra<br>
+        <span>One App, all solutions</span>
+    </header>
+
+    <h1 class="title">Chapter Login</h1>
+    <div class="errMessage">
+        <%= message %>
+    </div>
+    <section class="container">
+    
+    <form id="form" class="form" action="/oauth" method="POST">
+        <ul>
+            <li>
+                <label for="chapid">Chapter Id</label>
+                <input type="text" placeholder="Chapter Id" id="chapid" name="chapterId" tabindex="1">
+            </li>
+            <li>
+                <label for="password">Password</label>
+                <input type="password" placeholder="Password" id="password" name="password" tabindex="2">
+            </li>
+
+        </ul>
+        <input type="submit" value="Login" id="submit"/>
+    </form>
+</section>
+</body>
+</html>

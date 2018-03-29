@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    
+    <h1>Welcome to VIT ALL IN ONE APP</h1>
+
+    <h3 style="color: red;font-size: 20px"><%= message %></h3>
+
+    <form action="/verifyChapterLogin" method="POST">
+
+      CHAPTER NAME: <input type="text" name="chapter_name">
+      <br>
+      Password: <input type="password" name="password">
+      <br>
+      <input type="submit" value="SUBMIT">
+      
+    </form>
+
+
+  </body>
+</html>

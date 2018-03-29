@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>VITMantra Chapter Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style2.css">
+    <link href="/stylesheets/jQueryUI.css" rel = "stylesheet">
+    <link href="/stylesheets/wickedpicker.css" rel = "stylesheet">
+    <script src = "/javascripts/jQuery.js"></script>
+    <script src = "/javascripts/jQueryUI.js"></script>
+    <script src = "/javascripts/wickedPicker.js"></script>
+    <script type="text/javascript" src="/javascripts/script.js"></script>
+</head>
+<body>
+
+    <header>
+        VITMantra<br>
+        <span>One App, all solutions</span>
+    </header>
+
+    <% if(message == "Done"){ %>
+        <h1 class="title">Congratulations!</h1>
+        <div class="errMessage">
+            Your event was successfully posted. Now work to get registrations.
+        </div>
+        <div class="homeLinks">
+            <a href="/home">Go back to Home</a>
+        </div>
+     <% }
+     else { %>
+        <h1 class="title">Error!</h1>
+        <div class="errMessage">
+            <%= message %>
+        </div>
+
+     <% }%>
+    
+</body>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    
+    <p>Welcome to VITCC</p>
+    <br>
+
+    <h1>Get Faculty Json</h1>
+    <form action='/makeFacultyJson' method='POST'>
+
+      Register No: <input type="text" name="regno" value="15bit0099"><br>
+      Password: <input type="password" name="password" value='Mummypapa@3'><br>
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <br><br><br>
+
+    <h1>Get Detailed Attendance</h1>
+    <form action='/detailAttendance' method='POST'>
+
+      Register No: <input type="text" name="regno" value="15bit0099"><br>
+      Password: <input type="password" name="password" value='Mummypapa@3'><br>
+      semcode: <input type="text" name="semcode" value="WINSEM2016-17"><br>
+      classnbr: <input type="text" name="classnbr" value="2662"><br>
+      from_date: <input type="text" name="from_date" value="04-Jan-2017"><br>
+      to_date: <input type="text" name="to_date" value="08-Feb-2017"><br>
+      crscd : <input type="text" name="crscd" value="ITE2005"><br>
+      crstp : <input type="text" name="crstp" value="ETH"><br>
+
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <br><br><br>
+
+    <h1>Get Grades</h1>
+    <form action='/getGrades' method='POST'>
+
+      Register No: <input type="text" name="regno" value=""><br>
+      Password: <input type="password" name="password" value=''><br>
+      sem: <input type="text" name="sem" value=''><br>
+
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <br><br><br>
+
+    <h1>Get Attendance</h1>
+    <form action='/getAttendance' method='POST'>
+
+      Register No: <input type="text" name="regno" value=""><br>
+      Password: <input type="password" name="password" value=''><br>
+
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <br><br><br>
+
+    <h1>Get Exam Schedule</h1>
+    <form action='/getExamSchedule' method='POST'>
+
+      Register No: <input type="text" name="regno" value=""><br>
+      Password: <input type="password" name="password" value=''><br>
+
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <br><br><br>
+
+    <h1>Get Default Email and Password</h1>
+    <form action='/getDefaultEmailAndPassword' method='POST'>
+
+      Register No: <input type="text" name="regno" value=""><br>
+      Password: <input type="password" name="password" value=''><br>
+
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <br><br><br>
+
+    <h1>Get Time Table</h1>
+    <form action='/getTimetable' method='POST'>
+
+      Register No: <input type="text" name="regno" value=""><br>
+      Password: <input type="password" name="password" value=''><br>
+
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <br><br><br>
+
+    <h1>Get Messages</h1>
+    <form action='/getMessages' method='POST'>
+
+      Register No: <input type="text" name="regno" value=""><br>
+      Password: <input type="password" name="password" value=''><br>
+
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <br><br><br>
+
+    <h1>Get Course Page</h1>
+    <form action='/getCoursePage' method='POST'>
+
+      Sem: <input type="text" name="sem" value='FS'>
+      <br>
+      Classnbr: <input type="text" name="classnbr" value='1539'>
+      <br>
+      crscd: <input type="text" name="crscd" value='ITE1002'>
+      <br>
+      Crstp: <input type="text" name="crstp" value='ETH'>
+      <br>
+      Register No: <input type="text" name="regno" value=""><br>
+      Password: <input type="password" name="password" value=''><br>
+
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <br><br><br>
+
+    <h1>Get Classes</h1>
+    <form action='/getClasses' method='POST'>
+
+      Register No: <input type="text" name="regno" value=""><br>
+      Password: <input type="password" name="password" value=''><br>
+      Course: <input type="text" name="course" value='ITE1008'>
+
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <br><br><br>
+
+    <h1>Get Digital Assignments</h1>
+    <form action='/getDigitalAssignments' method='POST'>
+
+      Register No: <input type="text" name="regno" value=""><br>
+      Password: <input type="password" name="password" value=''><br>
+
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <br><br><br>
+
+    <h1>Get Marks2 New</h1>
+    <form action='/getMarks2' method='POST'>
+
+      Register No: <input type="text" name="regno" value=""><br>
+      Password: <input type="password" name="password" value=''><br>
+
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <br><br><br>
+
+    <h1>Check Login</h1>
+    <form action='/checkLogin' method='POST'>
+
+      Register No: <input type="text" name="regno" value="15bit0099"><br>
+      Password: <input type="password" name="password" value='Mummypapa@3'><br>
+
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <br><br><br>
+
+    <h1>Get Courses</h1>
+    <form action='/getCourses' method='POST'>
+
+      Register No: <input type="text" name="regno" value="15bit0099"><br>
+      Password: <input type="password" name="password" value='Mummypapa@3'><br>
+
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <br><br><br>
+
+    <h1>Apply Late Hour</h1>
+    <form action='/applyLateHour' method='POST'>
+
+      Faculty Id: <input type="text" name="cvFaculty" value="14458">
+      <br>
+      From Date: <input type="text" name="frmdate" value="22-Jan-2017">
+      <br>
+      From Time: <input type="text" name="frmtm" value="09:00 PM">
+      <br>
+      To Date: <input type="text" name="todate" value="29-Jan-2017">
+      <br>
+      To Time: <input type="text" name="totm" value="09:00 PM">
+      <br>
+      Venue: <input type="text" name="txtVenue" value="GDN">
+      <br>
+      Reason: <input type="text" name="txtRsn" value="Riviera">
+      <br>
+      Register No: <input type="text" name="regno" value="15bit0099"><br>
+      Password: <input type="password" name="password" value='Mummypapa@3'><br>
+
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <br><br><br>
+
+    
+    <h1>Get Late Hour Permissions</h1>
+    <form action='/getLateHourPermission' method='POST'>
+
+      Register No: <input type="text" name="regno" value="15bit0099"><br>
+      Password: <input type="password" name="password" value='Mummypapa@3'><br>
+
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <br><br><br>
+
+    <h1>Apply Hometown / Guardian Leave</h1>
+    <form action='/applyHometownLeave' method='POST'>
+
+      Apply To: <input type="text" name="apply" value="14458\FA">
+      <br>
+      Leave Type: <input type="text" name="lvtype" value="HT">
+      <br>
+      Exit On: <input type="text" name="exitdate" value="26-Mar-2017">
+      <br>
+      From Hour: <input type="text" name="sttime_hh" value="04">
+      <br>
+      From Min: <input type="text" name="sttime_mm" value="00">
+      <br>
+      From Type: <input type="text" name="frm_timetype" value="PM">
+      <br>
+      Entry Date: <input type="text" name="reentry_date" value="29-Mar-2017">
+      <br>
+      To Hour: <input type="text" name="endtime_hh" value="05">
+      <br>
+      To Min: <input type="text" name="endtime_mm" value="50">
+      <br>
+      To Type: <input type="text" name="to_timetype" value="PM">
+      <br>
+      Place And Address: <input type="text" name="place" value="Vellore">
+      <br>
+      Reason: <input type="text" name="reason" value="Shopping">
+      <br>
+      Register No: <input type="text" name="regno" value="15bit0099"><br>
+      Password: <input type="password" name="password" value='Mummypapa@3'><br>
+
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <br><br><br>
+
+    <h1>Apply Outing</h1>
+    <form action='/applyOuting' method='POST'>
+
+      Apply To: <input type="text" name="apply" value="14458\FA">
+      <br>
+      Leave Type: <input type="text" name="lvtype" value="OG">
+      <br>
+      Exit On: <input type="text" name="exitdate" value="22-Jan-2017">
+      <br>
+      From Hour: <input type="text" name="sttime_hh" value="04">
+      <br>
+      From Min: <input type="text" name="sttime_mm" value="00">
+      <br>
+      From Type: <input type="text" name="frm_timetype" value="PM">
+      <br>
+      To Hour: <input type="text" name="endtime_hh" value="05">
+      <br>
+      To Min: <input type="text" name="endtime_mm" value="50">
+      <br>
+      To Type: <input type="text" name="to_timetype" value="PM">
+      <br>
+      Place And Address: <input type="text" name="place" value="Vellore">
+      <br>
+      Reason: <input type="text" name="reason" value="Shopping">
+      <br>
+      Register No: <input type="text" name="regno" value="15bit0099"><br>
+      Password: <input type="password" name="password" value='Mummypapa@3'><br>
+
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <br><br><br>
+
+    <h1>Get Leaves</h1>
+    <form action='/getLeaves' method='POST'>
+      
+      Register No: <input type="text" name="regno" placeholder="Register No"><br>
+      Password: <input type="password" name="password" placeholder="password"><br>
+
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <br><br><br>
+
+
+    <h1>Cancel Leave</h1>
+    <form action='/cancelLeave' method='POST'>
+      
+      LeaveId: <input type="text" name="leave_id" placeholder="Empid" value="17017374"><br>
+      Register No: <input type="text" name="regno" placeholder="Register No" value="15bit0099"><br>
+      Password: <input type="password" name="password" placeholder="password" value='Mummypapa@3'><br>
+
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <br><br><br>
+
+
+    <h1>Cancel Late Hour</h1>
+    <form action='/cancelLateHour' method='POST'>
+      
+      pvPermitID: <input type="text" name="pvPermitID" placeholder="pvPermitID" value="17017374"><br>
+      Register No: <input type="text" name="regno" placeholder="Register No" value="15bit0099"><br>
+      Password: <input type="password" name="password" placeholder="password" value='Mummypapa@3'><br>
+
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <br><br><br>
+
+
+    <h1>Get Faculty</h1>
+    <form action='/getFaculty' method='POST'>
+      
+      Empid: <input type="text" name="empid" placeholder="Empid" value="12100"><br>
+      Register No: <input type="text" name="regno" placeholder="Register No" value="15bit0099"><br>
+      Password: <input type="password" name="password" placeholder="password" value='Mummypapa@3'><br>
+
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <br><br><br>
+
+
+    <h1>Get Digital Assigment Marks</h1>
+    <form action='/getDigitalAssignmentMarks' method='POST'>
+      
+      Register No: <input type="text" name="regno" placeholder="Register No" value="15bit0099"><br>
+      Password: <input type="password" name="password" placeholder="password" value='Mummypapa@3'><br>
+      sem: <input type="text" name="sem" placeholder="sem" value=''><br>
+      classnbr: <input type="text" name="classnbr" placeholder="classnbr" value=''><br>
+      crscd: <input type="text" name="crscd" placeholder="crscd" value=''><br>
+      crstp: <input type="text" name="crstp" placeholder="crstp" value=''><br>
+
+
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <br><br><br>
+
+
+    <h1>Get Digital New Assigment Marks2 New</h1>
+    <form action='/getDigitalAssignmentMarks2' method='POST'>
+      
+      Register No: <input type="text" name="regno" placeholder="Register No" value="15bit0099"><br>
+      Password: <input type="password" name="password" placeholder="password" value='Mummypapa@3'><br>
+      sem: <input type="text" name="sem" placeholder="sem" value='WS'><br>
+      classnbr: <input type="text" name="classnbr" placeholder="classnbr" value='2737'><br>
+      crscd: <input type="text" name="crscd" placeholder="crscd" value='ITE1006'><br>
+      crstp: <input type="text" name="crstp" placeholder="crstp" value='TH'><br>
+
+      <input type="submit" value="SUBMIT">
+    </form>
+
+
+
+<br><br><br><br><br><br>
+
+
+    <h1>Search Faculty</h1>
+    <form action='/searchFaculty' method='POST'>
+      
+      Name: <input type="text" name="name" placeholder="Faculty Name"><br>
+
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <br><br><br>
+
+    
+
+
+
+
+  </body>
+</html>

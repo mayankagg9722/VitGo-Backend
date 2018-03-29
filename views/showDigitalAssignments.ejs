@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>DA Marks</h1>
+    <p>Welcome to VITCC</p>
+    <br>
+
+    <% for(var i=0 ; i<data.length ; i++)
+    {
+    var subjectJson = data[i];
+    var courseTitle = subjectJson['Course Title'];
+    var courseType = subjectJson['Course Type']; 
+    var post_parameters = subjectJson['post_parameters'];
+    var sem = post_parameters[0];    
+    var classnbr = post_parameters[1];
+    var crscd = post_parameters[2];
+    var crstp = post_parameters[3];
+    %>
+    <form action="/getDigitalAssignmentMarks" method="POST">
+
+    <%= courseTitle %> &emsp;&emsp;&emsp; <%= courseType %>
+    <input type="hidden" name="sem" value="<%= sem %>">
+    <input type="hidden" name="classnbr" value="<%= classnbr %>">
+    <input type="hidden" name="regno" value="<%= regno %>">
+    <input type="hidden" name="password" value='<%= password %>'>
+    <input type="hidden" name="crscd" value="<%= crscd %>">
+    <input type="hidden" name="crstp" value="<%= crstp %>">
+    &emsp;&emsp;&emsp;
+    <input type="submit" name="submit">
+
+    </form>
+    
+    <br><br><br>
+
+    <% } %>
+
+
+   
+
+
+
+
+  </body>
+</html>

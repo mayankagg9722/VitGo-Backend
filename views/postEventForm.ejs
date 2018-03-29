@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Post Events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style2.css">
+    <link href="/stylesheets/jQueryUI.css" rel = "stylesheet">
+    <link href="/stylesheets/wickedpicker.css" rel = "stylesheet">
+    <script src = "/javascripts/jQuery.js"></script>
+    <script src = "/javascripts/jQueryUI.js"></script>
+    <script src = "/javascripts/wickedPicker.js"></script>
+    <script type="text/javascript" src="/javascripts/script.js"></script>
+</head>
+<body>
+
+    <header>
+        VITMantra<br>
+        <span>One App, all solutions</span>
+    </header>
+
+    <div class="postEventHeading">
+        <%= chapterName %> is about to post an event.<br>Please fill all the details and hit submit.<br>You are not allowed to edit events, so please be careful.
+    </div>
+    
+    <section class="container" style="margin-bottom: 0;">
+    
+    <form id="form1" class="form1" action="/chapterDidPostAnEvent" method="POST" enctype="multipart/form-data">
+        <ul>
+            <li>
+                <label for="eventName">Event Name</label>
+                <input type="text" placeholder="Event Name" id="eventName" name="eventName" tabindex="1">
+            </li>
+            <li>
+                <label for="venue">Venue</label>
+                <input type="text" placeholder="Venue" id="venue" name="venue" tabindex="2">
+            </li>
+            <li>
+                <label for="description">Description</label>
+                <textarea placeholder="Description" id="description" name="description" tabindex="3"></textarea>
+            </li>
+            
+            <li>
+                <label for="date">Date</label>
+                <input type="text" autocomplete="false" placeholder="Date" id="date" name="date" tabindex="2">
+            </li>
+
+            <li>
+                <label for="time">Time</label>
+                <input type="text" placeholder="Time" id="time" name="timepicker" tabindex="2" class="timepicker">
+            </li>
+
+            <li>
+                <label for="fees">Registration Fee(fill 0 if free)</label>
+                <span id="rupeeSymbol">₹</span>
+                <input type="text" placeholder="Registration Fee" id="fees" name="fees" tabindex="2" class="fees" onkeydown="return validateNumber(event)">
+            </li>
+            <li>
+                <label for="extraInfo">Info to collect:</label>
+                <input type="button" value="Add Field" onclick="add()">
+                <div id="fieldss">
+                    
+                </div>
+
+            </li>
+             
+            <li class="uploadPicture">
+                <span id="uploadPicture">Upload Poster(preferred size: 240x320)</span>
+                <input type="file" placeholder="Upload Picture" id="picture" name="poster" tabindex="2" accept="image/*">
+
+            </li>
+            <br>
+
+           
+            
+        </ul>
+        <input type="submit" value="Submit" id="submit" />
+        </form>
+</section>
+<div class="errMessage" id="errMessage" style="padding-bottom: 10px">
+    
+</div>
+
+<script type="text/javascript">
+var options = {
+        now: "00:00",
+        twentyFour: false,
+        upArrow: 'wickedpicker__controls__control-up',
+        downArrow: 'wickedpicker__controls__control-down',
+        close: 'wickedpicker__close',
+        hoverState: 'hover-state',
+        title: 'Choose Time',
+        showSeconds: false,
+        secondsInterval: 1,
+        minutesInterval: 30,
+        beforeShow: null,
+        afterShow: null,
+        show: null,
+        clearable: false,
+    };
+    $('.timepicker').wickedpicker(options);
+
+    function validateNumber(evt)
+    {
+      var theEvent = evt || window.event;
+      var key = theEvent.keyCode || theEvent.which;
+      if(key == 8)
+      {
+        return true;
+      }
+
+      key = String.fromCharCode( key );
+      var regex = /[0-9]|\./;
+      if( !regex.test(key) )
+      {
+        theEvent.returnValue = false;
+        if(theEvent.preventDefault) theEvent.preventDefault();
+      }
+    }
+
+    var divs = 0;
+    var inputDivision = '<div><input type="text" class="infoFields" placeholder="Field Name" name="fields[]" /><span onclick="removeSpan(this)">&#10060;</span></div>';
+
+    
+
+    function add()
+    {
+        document.getElementById("fieldss").innerHTML += inputDivision ;
+    }
+
+    function removeSpan(ele)
+    {
+        var div = ele.parentElement;
+        div.parentElement.removeChild(div);
+    }
+
+    document.getElementById("time").value = "";
+
+</script>
+</body>
+</html>
